@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_80x"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/height_15x"
+        android:layout_margin="@dimen/margin_5x"
+        android:background="@drawable/bg_ash_with_rounded_grey"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/question_duration_timer"
+                android:layout_width="@dimen/height_90x"
+                android:layout_height="@dimen/width_53x"
+                android:background="@drawable/bg_ash_with_rounded_black"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:visibility="gone"
+                android:paddingStart="@dimen/padding_10x"
+                android:paddingTop="@dimen/padding_5x"
+                android:paddingEnd="@dimen/padding_10x"
+                android:paddingBottom="@dimen/padding_5x"
+                android:text="@string/_00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/flags_challenges"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.54"
+                app:layout_constraintStart_toEndOf="@+id/question_duration_timer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_5x"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/tv_schedule"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/height_20x"
+            android:text="@string/schedule"
+            android:fontFamily="@font/inter_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_timer_for_game"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/height_20x"
+            android:fontFamily="@font/inter_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_timer"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/height_15x"
+            android:layout_height="@dimen/height_100x">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/hour"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_13"
+                app:layout_constraintBottom_toTopOf="@+id/et_hour_first"
+                app:layout_constraintEnd_toEndOf="@+id/et_hour_second"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/et_hour_first"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_hour_first"
+                android:inputType="number"
+                android:layout_width="55dp"
+                android:layout_height="@dimen/height_53x"
+                android:background="@drawable/bg_ash_with_rounded_grey_dark"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:hint="0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:textSize="@dimen/text_size_28"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_hour_second"
+                android:inputType="number"
+                android:layout_width="55dp"
+                android:layout_height="@dimen/height_53x"
+                android:background="@drawable/bg_ash_with_rounded_grey_dark"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="@dimen/text_size_28"
+                app:layout_constraintBottom_toBottomOf="@+id/et_hour_first"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/et_hour_first"
+                app:layout_constraintTop_toTopOf="@+id/et_hour_first" />
+
+            <TextView
+                android:id="@+id/minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/minute"
+                android:textSize="@dimen/text_size_13"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/et_minute_first"
+                app:layout_constraintEnd_toEndOf="@+id/et_minute_second"
+                app:layout_constraintStart_toStartOf="@+id/et_minute_first"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_minute_first"
+                android:inputType="number"
+                android:layout_width="55dp"
+                android:layout_height="@dimen/height_53x"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_ash_with_rounded_grey_dark"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="@dimen/text_size_28"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/et_hour_second"
+                app:layout_constraintTop_toTopOf="@+id/et_hour_second" />
+
+            <EditText
+                android:id="@+id/et_minute_second"
+                android:inputType="number"
+                android:layout_width="55dp"
+                android:layout_height="@dimen/height_53x"
+                android:background="@drawable/bg_ash_with_rounded_grey_dark"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="@dimen/text_size_28"
+                app:layout_constraintBottom_toBottomOf="@+id/et_minute_first"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/et_minute_first"
+                app:layout_constraintTop_toTopOf="@+id/et_minute_first" />
+
+            <TextView
+                android:id="@+id/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/second"
+                android:textSize="@dimen/text_size_13"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/et_second_first"
+                app:layout_constraintEnd_toEndOf="@+id/et_second_second"
+                app:layout_constraintStart_toStartOf="@+id/et_second_first"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_second_first"
+                android:inputType="number"
+                android:layout_width="55dp"
+                android:layout_height="@dimen/height_53x"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_ash_with_rounded_grey_dark"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="@dimen/text_size_28"
+                app:layout_constraintBottom_toBottomOf="@+id/et_minute_second"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/et_minute_second"
+                app:layout_constraintTop_toTopOf="@+id/et_minute_second" />
+
+            <EditText
+                android:id="@+id/et_second_second"
+                android:layout_width="55dp"
+                android:layout_height="@dimen/height_53x"
+                android:background="@drawable/bg_ash_with_rounded_grey_dark"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:inputType="number|numberDecimal"
+                android:maxLength="1"
+                android:lines="1"
+                android:hint="0"
+                android:textSize="@dimen/text_size_28"
+                app:layout_constraintBottom_toBottomOf="@+id/et_second_first"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/et_second_first"
+                app:layout_constraintTop_toTopOf="@+id/et_second_first" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_question_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            tools:layout_editor_absoluteY="714dp">
+
+            <ImageView
+                android:id="@+id/iv_flag"
+                android:layout_width="@dimen/height_75x"
+                android:layout_height="@dimen/height_53x"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question" />
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/guess_the_country_from_the_flag"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_flag">
+
+                <LinearLayout
+                    android:layout_width="@dimen/margin_100x"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/first_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_ash_with_rounded_black_boarder"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/padding_5x"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingEnd="@dimen/padding_5x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/ans_status_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="3dp"
+                        android:textSize="@dimen/text_size_10"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/margin_100x"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10x"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/second_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_ash_with_rounded_black_boarder"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/padding_5x"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingEnd="@dimen/padding_5x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/ans_status_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:textSize="@dimen/text_size_10"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_flag"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <LinearLayout
+                    android:layout_width="@dimen/margin_100x"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/third_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_ash_with_rounded_black_boarder"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/padding_5x"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingEnd="@dimen/padding_5x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/ans_status_third"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:visibility="gone"
+                        android:textSize="@dimen/text_size_10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/margin_100x"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_10x"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fourth_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_ash_with_rounded_black_boarder"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/padding_5x"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingEnd="@dimen/padding_5x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/ans_status_fourth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:textSize="@dimen/text_size_10"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/ll_score"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/game_over"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_28"
+                android:fontFamily="@font/inter_bold"
+                android:layout_width="wrap_content"
+                android:text="@string/game_over"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_score_board"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18"
+                android:fontFamily="@font/inter_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="@dimen/height_110x"
+            android:layout_height="@dimen/text_size_29"
+            android:background="@drawable/bg_ash_with_rounded_orange"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_18" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

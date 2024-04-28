@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MechineSecond</string>
+    <string name="flags_challenges">FLAGS CHALLENGES</string>
+    <string name="schedule">SCHEDULE</string>
+    <string name="hour">Hour</string>
+    <string name="minute">Minute</string>
+    <string name="second">Second</string>
+    <string name="save">Save</string>
+    <string name="countdowntimer">countDownTimer</string>
+    <string name="_00">00</string>
+    <string name="guess_the_country_from_the_flag">GUESS THE COUNTRY FROM THE FLAG</string>
+    <string name="correct">Correct</string>
+    <string name="wrong">Wrong</string>
+    <string name="will_start_in">WILL START IN</string>
+    <string name="game_over">GAME OVER</string>
+    <string name="launched">launched</string>
+    <string name="total_score">"Total score "</string>
+    <string name="totalsum">totalSum</string>
+    <string name="gamestartedtime">gameStartedTime</string>
+    <string name="gamestarted">gameStarted</string>
+    <string name="timeatappinbackground">timeAtAppInBackground</string>
+</resources>
